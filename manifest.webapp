@@ -14,5 +14,9 @@
         "name":"Igor Araujo",
         "name":"Gabriel Vianna",
         "name":"Tulio Ribeiro"
+    },
+    "icons" : {
+        "60" : "/img/icon_60.png",
+        "128" : "/img/icon_128.png"
     }
 }
