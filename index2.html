@@ -1,45 +1,15 @@
 <!DOCTYPE html>
 <html ng-app>
-    <head>
-    <meta charset="utf-8">
-        <title>Acedemy Break</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/style2.css" rel="stylesheet">
-    </head>
-    <body ng-controller="AppController">
-        <div ng-show="config">
-        <label>Série</label>
-            <select class="select-style">
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
-            <select>
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
-        </div>
-        <div ng-hide="config">
-            <h1>Serie: {{serie}}</h1>
-            <div class=" well well-sm relogio">01:57</div>
-            <hr>
-            <button ng-click="iniciar()" ng-hide="ocupado">Iniciar</button>
-            <h1 ng-show="ocupado"><b>{{acao}}</b></h1>
-        </div>
-        <div class="select-style">
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-        </div>
-        <script src="js/lib/jquery-1.11.0.min.js"></script>
-        <script src="js/lib/bootstrap.min.js"></script>
-        <script src="js/lib/angular.min.js"></script>
-        <script src="js/controllers/AppController.js"></script>
-    </body>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-controller="AppController">
+    <h1>{{time}}</h1>
+    <script src="js/lib/jquery-1.11.0.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/controllers/AppController.js"></script>
+  </body>
 </html>
