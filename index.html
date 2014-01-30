@@ -12,18 +12,16 @@
         <embed src="audio/alarm.mp3" autostart=true width=0 height=0 name="sound1"
                enablejavascript="true">
         <div ng-show="config">
-        <table>
+        <table align="center">
                 <tbody>
-                    <tr>
+                    <tr >
                         <td colspan="2">
                             <h2>Série</h2>
                         </td>
                         <td>
                             <div class="select-style">
-                                <select >
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
+                                <select ng-model="serie" ng-init="serie = 1">
+                                    <option ng-repeat="n in n10" value="{{n}}" ng-selected="n == 1">{{(n < 10)?"0"+n:n}}</option>
                                 </select>
                             </div>
                         </td>
@@ -36,10 +34,8 @@
                     <tr>
                         <td>
                             <div class="select-style">
-                                <select >
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
+                                <select ng-model="nMinDescanso">
+                                    <option ng-repeat="n in n60" value="{{n}}" ng-selected="n == 0">{{(n < 10)?"0"+n:n}}</option>
                                 </select>
                             </div>
                         </td>
@@ -48,10 +44,8 @@
                         </td>
                         <td>
                             <div class="select-style">
-                                <select >
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
+                                <select ng-model="nSegDescanso" >
+                                    <option ng-repeat="n in n60" value="{{n}}" ng-selected="n == 0">{{(n < 10)?"0"+n:n}}</option>
                                 </select>
                             </div>
                         </td>
@@ -64,10 +58,8 @@
                     <tr>
                         <td>
                             <div class="select-style">
-                                <select >
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
+                                <select ng-model="nMinTreino">
+                                    <option ng-repeat="n in n60" value="{{n}}" ng-selected="n == 0">{{(n < 10)?"0"+n:n}}</option>
                                 </select>
                             </div>
                         </td>
@@ -76,22 +68,22 @@
                         </td>
                         <td>
                             <div class="select-style">
-                                <select >
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
+                                <select ng-model="nSegTreino">
+                                    <option ng-repeat="n in n60" value="{{n}}" ng-selected="n == 0">{{(n < 10)?"0"+n:n}}</option>
                                 </select>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <hr>
+            <button class="btn btn-primary btn-block btn-lg" ng-click="iniciar()">Iniciar</button>
         </div>
         <div ng-hide="config">
             <h1>Serie: {{serie}}</h1>
             <div class=" well well-sm relogio text-center">{{minutos}}:{{segundos}}</div>
             <hr>
-                <button ng-click="iniciar()" class="btn btn-primary btn-lg btn-block" ng-hide="ocupado">Iniciar</button>
+                <button ng-click="iniciar()" class="btn btn-primary btn-lg btn-block" ng-hide="ocupado">Descansar</button>
                 <div id="divAcao" ng-show="ocupado"><h1><b>{{acao}}</b></h1></div>
         </div>
         <script src="js/lib/jquery-1.11.0.min.js"></script>
