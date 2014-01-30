@@ -12,18 +12,7 @@
         <embed src="audio/alarm.mp3" autostart=true width=0 height=0 name="sound1"
                enablejavascript="true">
         <div ng-show="config">
-        <label>Série</label>
-            <select class="select-style">
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
-            <select>
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
-            <table>
+        <table>
                 <tbody>
                     <tr>
                         <td colspan="2">
@@ -104,14 +93,6 @@
             <hr>
                 <button ng-click="iniciar()" class="btn btn-primary btn-lg btn-block" ng-hide="ocupado">Iniciar</button>
                 <div id="divAcao" ng-show="ocupado"><h1><b>{{acao}}</b></h1></div>
-        </div>
-        <div class="select-style">
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
         </div>
         <script src="js/lib/jquery-1.11.0.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
