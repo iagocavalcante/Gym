@@ -2,7 +2,7 @@
     "name": "Gym",
     "version": "1.0",
     "description":"App para Academia",
-    "launch_path":"/index.html",
+    "launch_path":"/index2.html",
     "permissions":{
         "storage":{
             "description":"Armazenar"
