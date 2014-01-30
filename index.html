@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app>
     <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
         <title>Acedemy Break</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -9,35 +9,66 @@
         <link href="css/style2.css" rel="stylesheet">
     </head>
     <body ng-controller="AppController">
+<<<<<<< HEAD
         <embed src="audio/alarm.mp3" autostart=true width=0 height=0 name="sound1"
 enablejavascript="true">
+=======
+        <embed src="/audio/alarm.mp3" autostart=false width=0 height=0 name="sound1"
+               enablejavascript="true">
+>>>>>>> a7e89a9cb4a40bdc0f9aa22f3d85e310f436afa7
         <div ng-show="config">
-        <label>Série</label>
-            <select class="select-style">
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
-            <select>
-                <option>00</option>
-                <option>01</option>
-                <option>02</option>
-            </select>
+            <div class="row">
+                <div class="col-sm-1">
+                    <label>Série</label>
+                </div>
+                <div class="col-md-1">
+                    <select>
+                        <option>00</option>
+                        <option>01</option>
+                        <option>02</option>
+                    </select>
+                </div>
+            </div>
+            <h2>Descanso</h2>
+            <div class="select-style">
+                <select >
+                    <option>00</option>
+                    <option>01</option>
+                    <option>02</option>
+                </select>
+            </div>
+            <h2>:</h2>
+            <div class="select-style">
+                <select >
+                    <option>00</option>
+                    <option>01</option>
+                    <option>02</option>
+                </select>
+            </div>
+            <br>
+            <h2>Treino</h2>
+            <div class="select-style">
+                <select >
+                    <option>00</option>
+                    <option>01</option>
+                    <option>02</option>
+                </select>
+            </div>
+            <h2>:</h2>
+            <div class="select-style">
+                <select >
+                    <option>00</option>
+                    <option>01</option>
+                    <option>02</option>
+                </select>
+            </div>
         </div>
         <div ng-hide="config">
             <h1>Serie: {{serie}}</h1>
             <div class=" well well-sm relogio text-center">{{minutos}}:{{segundos}}</div>
             <hr>
-                <button ng-click="iniciar()" class="btn btn-primary btn-lg btn-block" ng-hide="ocupado">Iniciar</button>
-                <div id="divAcao" ng-show="ocupado"><h1><b>{{acao}}</b></h1></div>
-        </div>
-        <div class="select-style">
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
+            <button ng-click="iniciar()" class="btn btn-primary btn-lg btn-block" ng-hide="ocupado">Iniciar</button>
+            <div id="divAcao" ng-show="ocupado"><h1><b>{{acao}}</b></h1></div>
         </div>
         <script src="js/lib/jquery-1.11.0.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
