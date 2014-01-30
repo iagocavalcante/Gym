@@ -1,0 +1,19 @@
+.barra {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+}
+
+.relogio{
+    font-family: digital;
+     font-size: 120px;
+}
+
+@font-face {
+    font-family: digital;
+    src: url('/fonts/DS-DIGIB.TTF');
+}
+
