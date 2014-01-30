@@ -1,11 +1,27 @@
 function AppController($scope, $timeout) {
+    var tocar = function(som) {
+        var audio = new Audio('/audio/' + som + '.mp3');
+        audio.play();
+    };
+
     var init = function() {
         $scope.config = false;
         $scope.serie = 3;
-        $scope.tempoSerie = 30;
+//        $scope.tempoSerie = 30;
         $scope.descanso = 60;
         $scope.ocupado = false;
         $scope.acao = "Serie";
+
+        $.ionSound({
+            sounds: [// set needed sounds names
+                "alarm",
+                "beep"
+            ],
+            path: "/audio/", // set path to sounds
+            multiPlay: false, // playing only 1 sound at once
+            volume: "0.5"                   // not so loud please
+        });
+        $.ionSound.play("alarm");
     };
 
     init();
@@ -14,11 +30,11 @@ function AppController($scope, $timeout) {
         $scope.tempo = $scope.tempo - 1;
         $scope.segundos = $scope.tempo % 60;
         $scope.minutos = ($scope.tempo - $scope.segundos) / 60;
-        if($scope.segundos < 10){
-            $scope.segundos = "0"+$scope.segundos;
+        if ($scope.segundos < 10) {
+            $scope.segundos = "0" + $scope.segundos;
         }
-        if($scope.minutos < 10){
-            $scope.minutos = "0"+$scope.minutos;
+        if ($scope.minutos < 10) {
+            $scope.minutos = "0" + $scope.minutos;
         }
         if ($scope.tempo === 0) {
             if ($scope.tempoSerie) {
@@ -72,9 +88,6 @@ function AppController($scope, $timeout) {
             contar();
         }
     };
-
-
-
 }
 
 
