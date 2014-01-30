@@ -1,6 +1,6 @@
 function AppController($scope, $timeout) {
     var init = function() {
-        $scope.config = true;
+        $scope.config = false;
         $scope.serie = 3;
         $scope.tempoSerie = 30;
         $scope.descanso = 60;
