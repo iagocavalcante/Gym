@@ -1,6 +1,6 @@
 function AppController($scope, $timeout) {
     var tocar = function(som) {
-        var audio = new Audio('/audio/' + som + '.mp3');
+        var audio = new Audio('/audio/' + som + '.ogg');
         audio.play();
     };
 
@@ -24,22 +24,12 @@ function AppController($scope, $timeout) {
         for (var i = 1; i < 11; i++) {
             $scope.n10[i] = i;
         }
-
-        $.ionSound({
-            sounds: [// set needed sounds names
-                "alarmmoz",
-                "beep"
-            ],
-            path: "/audio/", // set path to sounds
-            multiPlay: false, // playing only 1 sound at once
-            volume: "0.5"                   // not so loud please
-        });
-        $.ionSound.play("alarmmoz");
     };
 
     init();
 
     var contar = function() {
+        
         $scope.tempo = $scope.tempo - 1;
         $scope.segundos = $scope.tempo % 60;
         $scope.minutos = ($scope.tempo - $scope.segundos) / 60;
@@ -49,7 +39,11 @@ function AppController($scope, $timeout) {
         if ($scope.minutos < 10) {
             $scope.minutos = "0" + $scope.minutos;
         }
+        if($scope.tempo === 10 || $scope.tempo <= 5 ){
+            tocar("beep");
+        }
         if ($scope.tempo === 0) {
+            tocar("alarm");
             if ($scope.tempoSerie) {
                 switch ($scope.acao) {
                     case "Serie":
@@ -79,6 +73,14 @@ function AppController($scope, $timeout) {
                         var div = document.getElementById("divAcao");
                         div.setAttribute("class", "alert alert-success text-center");
                         $scope.tempo = $scope.tempoSerie;
+                        $scope.segundos = $scope.tempo % 60;
+                        $scope.minutos = ($scope.tempo - $scope.segundos) / 60;
+                        if ($scope.segundos < 10) {
+                            $scope.segundos = "0" + $scope.segundos;
+                        }
+                        if ($scope.minutos < 10) {
+                            $scope.minutos = "0" + $scope.minutos;
+                        }
                         $timeout(contar, 1000);
                         break;
                 }
