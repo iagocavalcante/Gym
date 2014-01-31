@@ -40,7 +40,7 @@ function AppController($scope, $timeout) {
             $scope.minutos = "0" + $scope.minutos;
         }
         if($scope.tempo === 10 || $scope.tempo <= 5 ){
-            tocar("beep");
+            tocar("alarm");
         }
         if ($scope.tempo === 0) {
             tocar("alarm");
