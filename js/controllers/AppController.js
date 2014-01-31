@@ -1,6 +1,6 @@
 function AppController($scope, $timeout) {
     var tocar = function(som) {
-        var audio = new Audio('/audio/' + som + '.ogg');
+        var audio = new Audio('/gym/audio/' + som + '.wav');
         audio.play();
     };
 
@@ -39,8 +39,8 @@ function AppController($scope, $timeout) {
         if ($scope.minutos < 10) {
             $scope.minutos = "0" + $scope.minutos;
         }
-        if($scope.tempo === 10 || $scope.tempo <= 5 ){
-            tocar("alarm");
+        if($scope.tempo === 10 || ($scope.tempo <= 5 && $scope.tempo !== 0)){
+            tocar("beep");
         }
         if ($scope.tempo === 0) {
             tocar("alarm");
