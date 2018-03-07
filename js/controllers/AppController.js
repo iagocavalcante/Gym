@@ -1,6 +1,6 @@
 function AppController($scope, $timeout) {
     var tocar = function(som) {
-        var audio = new Audio('/gym/audio/' + som + '.wav');
+        var audio = new Audio('/audio/' + som + '.wav');
         audio.play();
     };
 
