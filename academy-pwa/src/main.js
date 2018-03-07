@@ -7,13 +7,13 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify, {
-  primary: "#FF7043",
-  secondary: "#FF8A65",
-  accent: "#33691E",
-  error: "#f44336",
-  warning: "#ffeb3b",
-  info: "#2196f3",
-  success: "#4caf50"
+  primary: '#FF7043',
+  secondary: '#FF8A65',
+  accent: '#33691E',
+  error: '#f44336',
+  warning: '#ffeb3b',
+  info: '#2196f3',
+  success: '#4caf50'
 })
 
 Vue.config.productionTip = false
