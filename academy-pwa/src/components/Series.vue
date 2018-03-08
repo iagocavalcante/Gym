@@ -1,13 +1,13 @@
 <template>
   <v-flex>
     <v-card dark color="primary">
-      <v-card-title>Repetições</v-card-title>
+      <v-card-title>Séries</v-card-title>
       <v-layout row>
         <v-flex xs10 offset-xs1>
           <v-select
             :items="items"
             v-model="e1"
-            label="Número de repetições"
+            label="Número de Séries"
             single-line
           ></v-select>
         </v-flex>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Repeticao',
+  name: 'Series',
   computed: {
     binding () {
       const binding = {}
