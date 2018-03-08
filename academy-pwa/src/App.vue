@@ -8,7 +8,7 @@
             <v-spacer></v-spacer>
           </v-card-title>
         </v-card>
-        <repeticao></repeticao>
+        <serie></serie>
         <descanso></descanso>
         <treino></treino>
         <v-btn color="info">Iniciar</v-btn>
@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import Repeticao from './components/Repeticao'
+import Serie from './components/Serie'
 import Descanso from './components/Descanso'
 import Treino from './components/Treino'
 export default {
   components: {
-    Repeticao,
+    Serie,
     Descanso,
     Treino
   },
