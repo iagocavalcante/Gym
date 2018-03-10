@@ -1,7 +1,7 @@
 <template>
   <v-flex>
     <v-card dark color="primary">
-      <v-card-title>Séries</v-card-title>
+      <v-card-title id="series-title">Séries</v-card-title>
       <v-layout row>
         <v-flex xs10 offset-xs1>
           <v-select
