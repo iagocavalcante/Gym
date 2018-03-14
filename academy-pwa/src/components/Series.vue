@@ -23,7 +23,6 @@ export default {
     binding () {
       const binding = {}
       binding.column = true
-
       return binding
     }
   },

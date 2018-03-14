@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import Serie from './components/Serie'
+import Series from './components/Series'
 import Descanso from './components/Descanso'
 import Treino from './components/Treino'
 export default {
   components: {
-    Serie,
+    Series,
     Descanso,
     Treino
   },
