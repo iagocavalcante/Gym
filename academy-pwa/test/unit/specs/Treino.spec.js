@@ -5,7 +5,7 @@ describe('Treino.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Treino)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('#series-title').textContent)
-      .to.equal('Séries')
+    expect(vm.$el.querySelector('#treino-title').textContent)
+      .to.equal('Treino')
   })
 })
