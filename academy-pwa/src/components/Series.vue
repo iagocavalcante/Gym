@@ -6,7 +6,6 @@
         <v-flex xs10 offset-xs1>
           <v-select
             :items="items"
-            v-model="e1"
             label="Número de Séries"
             single-line
           ></v-select>
@@ -28,10 +27,6 @@ export default {
   },
   data () {
     return {
-      e1: null,
-      e2: null,
-      e3: null,
-      e4: null,
       items: [
         { text: '01' },
         { text: '02' },

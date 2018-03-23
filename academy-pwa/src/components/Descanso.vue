@@ -37,10 +37,6 @@ export default {
   },
   data () {
     return {
-      e1: null,
-      e2: null,
-      e3: null,
-      e4: null,
       items: [
         { text: 'State 1' },
         { text: 'State 2' },
