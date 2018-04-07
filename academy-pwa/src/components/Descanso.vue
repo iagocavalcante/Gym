@@ -38,13 +38,13 @@ export default {
   data () {
     return {
       items: [
-        { text: 'State 1' },
-        { text: 'State 2' },
-        { text: 'State 3' },
-        { text: 'State 4' },
-        { text: 'State 5' },
-        { text: 'State 6' },
-        { text: 'State 7' }
+        { text: '01:00' },
+        { text: '02:00' },
+        { text: '03:00' },
+        { text: '04:00' },
+        { text: '05:00' },
+        { text: '06:00' },
+        { text: '07:00' }
       ]
     }
   }
