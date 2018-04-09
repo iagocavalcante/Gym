@@ -8,7 +8,7 @@
             <v-spacer></v-spacer>
           </v-card-title>
         </v-card>
-        <serie></serie>
+        <series></series>
         <descanso></descanso>
         <treino></treino>
         <v-btn color="info">Iniciar</v-btn>

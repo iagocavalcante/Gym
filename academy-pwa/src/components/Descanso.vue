@@ -1,20 +1,20 @@
 <template>
   <v-flex>
     <v-card dark color="primary">
-      <v-card-title>Descanso</v-card-title>
+      <v-card-title>Tempo de descanso</v-card-title>
       <v-layout row>
         <v-flex xs4 offset-xs1>
           <v-select
-            :items="items"
-            v-model="e1"
+            :items="minutos"
+            v-model="minutos"
             label="Minutos"
             single-line
           ></v-select>
         </v-flex>
         <v-flex xs4 offset-xs1>
           <v-select xs5
-            :items="items"
-            v-model="e1"
+            :items="segundos"
+            v-model="segundos"
             label="Segundos"
             single-line
           ></v-select>
@@ -37,14 +37,35 @@ export default {
   },
   data () {
     return {
-      items: [
-        { text: '01:00' },
-        { text: '02:00' },
-        { text: '03:00' },
-        { text: '04:00' },
-        { text: '05:00' },
-        { text: '06:00' },
-        { text: '07:00' }
+      minutos: [
+        { text: '00' },
+        { text: '05' },
+        { text: '10' },
+        { text: '15' },
+        { text: '20' },
+        { text: '25' },
+        { text: '30' },
+        { text: '35' },
+        { text: '40' },
+        { text: '45' },
+        { text: '50' },
+        { text: '55' },
+        { text: '60' }
+      ],
+      segundos: [
+        { text: '00' },
+        { text: '05' },
+        { text: '10' },
+        { text: '15' },
+        { text: '20' },
+        { text: '25' },
+        { text: '30' },
+        { text: '35' },
+        { text: '40' },
+        { text: '45' },
+        { text: '50' },
+        { text: '55' },
+        { text: '60' }
       ]
     }
   }
