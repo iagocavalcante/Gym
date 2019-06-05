@@ -72,7 +72,7 @@
     "rimraf": "2.6.3",
     "selenium-server": "3.141.59",
     "semver": "6.1.1",
-    "shelljs": "0.7.8",
+    "shelljs": "0.8.3",
     "sinon": "7.3.2",
     "sinon-chai": "2.14.0",
     "sw-precache-webpack-plugin": "0.11.5",
