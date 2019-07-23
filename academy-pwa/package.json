@@ -16,7 +16,7 @@
   "dependencies": {
     "vue": "2.6.10",
     "vue-router": "3.0.7",
-    "vuetify": "1.5.16"
+    "vuetify": "2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "9.6.1",
